@@ -8,14 +8,25 @@ import Inputer from "./components/Inputer";
 import WelcomeMessage from "./components/WelcomeMessage";
 import Dashboard from "./components/Dashboard";
 import Notification from "./components/Notification";
+import UserList from "./components/UserList";
+import NameForm from "./components/NameForm";
+import UncontrolledInput from "./components/UncontrolledInput";
 
 function App() {
   return (
     <>
+      <NameForm />
+
       <ThemeToggle />
+
+      <UncontrolledInput />
+
+      <UserList />
+
       <Header />
-      <Notification hasNewMessages = {true} />
-      <Dashboard isLoggedIn={true} />
+
+      <Notification hasNewMessages={true} />
+      <Dashboard isLoggedIn={false} />
       <Inputer />
       <Greeting name="Abdullahi" surname="Dahir" />
       <WelcomeMessage isLoggedIn={true} />
